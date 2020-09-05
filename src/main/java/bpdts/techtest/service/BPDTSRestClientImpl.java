@@ -40,10 +40,6 @@ public class BPDTSRestClientImpl implements BPDTSRestClient {
 
     Collection<User> users = parseResponse(response);
 
-    for (User u : users) {
-      u.setCity(city);
-    }
-
     log.debug("[" + users.size() + "] Users returned from City [" + city + "]");
     return users;
   }

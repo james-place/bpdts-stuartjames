@@ -34,7 +34,7 @@ public class UserDistanceImpl implements UserDistance {
 
     // First Search by city name
     if (!(cityName == null) && !cityName.isEmpty()) {
-      log.debug("Getting users from {}", cityName);
+      log.debug("Users from {}", cityName);
       users.addAll(BPDTSRestClient.getAllUsersFromCity(cityName));
     } else {
       log.debug("No city name provided");
@@ -42,7 +42,7 @@ public class UserDistanceImpl implements UserDistance {
 
     // If coordinates and distance are provided find all users with in range
     if (distance != null && latitude != null && longitude != null) {
-      log.debug("Getting users within [{}] miles of [{} , {}]", distance, latitude, longitude);
+      log.debug("Users within [{}] miles of [{} , {}]", distance, latitude, longitude);
 
       boolean validParams = isValidParams(distance, latitude, longitude, results);
 
@@ -55,7 +55,7 @@ public class UserDistanceImpl implements UserDistance {
       log.debug("No coordinates provided");
     }
 
-    log.debug("[{}] users found", users.size());
+    log.debug("{} users found", users.size());
     results.setUsers(users);
 
     return results;
@@ -91,7 +91,6 @@ public class UserDistanceImpl implements UserDistance {
       GeoLocation geoLocation = new GeoLocation(user.getLatitude(), user.getLongitude());
       double calculatedDistance = distanceCalculator.calculateDistance(geoLocation, location);
       if (calculatedDistance <= distance) {
-        user.setDistanceFromCoords(calculatedDistance);
         usersWithinDistance.add(user);
       }
     }

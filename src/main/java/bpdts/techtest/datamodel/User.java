@@ -17,8 +17,8 @@ public class User {
   private double latitude;
   private double longitude;
 
-  private String city;
-  private double distanceFromCoords;
+//  private String city;
+//  private double distanceFromCoords;
 
   public int getId() {
     return id;
@@ -74,22 +74,6 @@ public class User {
 
   public void setLongitude(double longitude) {
     this.longitude = longitude;
-  }
-
-  public String getCity() {
-    return city;
-  }
-
-  public void setCity(String city) {
-    this.city = city;
-  }
-
-  public double getDistanceFromCoords() {
-    return distanceFromCoords;
-  }
-
-  public void setDistanceFromCoords(double distanceFromCoords) {
-    this.distanceFromCoords = distanceFromCoords;
   }
 
   @Override
