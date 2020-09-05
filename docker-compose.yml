@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  bpdtstest-stuartjames-app-container:
+    image: bpdtstest-stuartjames:1
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/bpdtstest-stuartjames
+    ports:
+      - "8080"
