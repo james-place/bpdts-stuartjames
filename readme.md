@@ -42,6 +42,12 @@ I've chosen to containerise the application using docker. For easy deployment I'
 to create a docker-compose.yml file that will create a runtime container and start up the 
 application.
 
+```
+Note: When deployed with docker-compose use docker-compose ps to find the port that has been bound to the service
+the URL will need to be amended accordingly
+GET http://localhost:XXXXX/api/bpdts/techtest/users-in-london-or-within-sixty-miles-of-london
+```
+
 ### Application scale
 The application can be scaled using --scale option of the "docker-compose up" command
 example
