@@ -38,7 +38,7 @@ The Following url can be used to get the results of the implemented solution.
 GET http://localhost:8080/api/bpdts/techtest/users-in-london-or-within-sixty-miles-of-london
 
 ### Deploying with Docker.
-I've chosen to containerise the application using docker. For easy deployment I've chose 
+I've chosen to containerise the application using docker. For easy deployment I've chosen 
 to create a docker-compose.yml file that will create a runtime container and start up the 
 application.
 
