@@ -17,9 +17,6 @@ public class User {
   private double latitude;
   private double longitude;
 
-//  private String city;
-//  private double distanceFromCoords;
-
   public int getId() {
     return id;
   }
